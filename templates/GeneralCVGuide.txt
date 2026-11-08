@@ -1,0 +1,138 @@
+## Checklist de TL;DR
+☐ Una página, una sola columna, PDF con el nombre First-Last-Resume.pdf
+☐ Sin foto, sin barras de habilidades, sin objetivo, sin "referencias disponibles"
+☐ La tercera parte de arriba = tu mejor material (zona de escaneo de 6 segundos)
+☐ Cada bullet: verbo fuerte + un número (fórmula XYZ donde haya un resultado medible)
+☐ No todos los números son un % delta: mezcla escala y alcance (usuarios, servicios, $ de lo que manejaste)
+☐ Habilidades: agrupadas, ordenadas por relevancia, todo defendible en entrevista
+☐ Ortografía exacta de keywords replicada de cada JD (React.js vs React importa)
+☐ Reordena para que los top 3 requisitos del JD sean tus top 3 bullets
+☐ 2-3 versiones base + ajustes de 15 minutos por aplicación
+☐ Proyectos (para juniors): desplegados, URL en vivo en el bullet, no clon de tutorial ______________________________________
+
+Estuve en los dos lados: cientos de aplicaciones entre dos búsquedas de trabajo y luego revisando CVs para mi propio equipo. Esto es todo lo que ojalá alguien me hubiera dicho antes de mi primera búsqueda. Sin relleno, sin "¡usa verbos de acción!!".
+
+Es largo, pero léelo completo y vas a saber más sobre CVs de SWE que el 95% de la gente contra la que compites.
+
+Parte 1: Cómo de verdad leen tu CV
+Una persona ve tu CV como 6 segundos, o 10 si tienes suerte. Lo escanean: título actual, empresa actual, fechas, stack de tecnología, escuela. En ese orden. La tercera parte de arriba de tu CV está haciendo el 80% del trabajo. Diseña en consecuencia.
+
+r/ResumeTips - La plantilla de currículum para ingeniero de software que realmente consigue entrevistas (Todo lo que aprendí sobre currículums de ingenieros de software tras enviar más de 500 solicitudes y revisarlas yo mismo).
+El ATS casi nunca te "rechaza automáticamente". Pero igual te mata. Lo de los robots tirando CVs es, en su mayor parte, un mito. Lo que pasa de verdad: el ATS es una base de datos buscable. Un reclutador con 800 candidatos mete "React" "AWS" "Kubernetes" en una barra de búsqueda y solo abre lo que coincide. No te rechazaron. Nunca te encontraron. Mismo resultado, mecanismo distinto, y eso cambia cómo optimizas:
+
+Tu CV tiene que ser legible por máquina: nada de tablas, nada de cuadros de texto, nada de layouts de dos columnas, nada de íconos, nada de info crítica en headers/footers.
+
+Usa la ortografía exacta del job description. Si el JD dice "CI/CD" y tú escribiste "continuous integration," puede que ni aparezcas en la búsqueda. Cubre ambos: "React (React.js)", "PostgreSQL (Postgres)".
+
+Los reclutadores no pueden evaluar tu ingeniería. Hacen match por patrones. El primer filtro casi siempre es gente no técnica, y compara una lista de chequeo: años, stack, grado. El gerente de contratación (lector #2) es el que sí se preocupa por el fondo. Así que tu CV necesita densidad de keywords para sobrevivir al lector #1 Y sustancia para impresionar al lector #2. La mayoría de los CVs tienen una cosa o la otra.
+
+Parte 2: La plantilla (ley establecida hasta ahora)
+El formato de abajo es aburrido a propósito. Aburrido parsea. Aburrido escanea. Aburrido gana.
+
+Una página (máximo dos si tienes 10+ años, y la página 1 tiene que sostenerse sola). Una sola columna. PDF, siempre, con nombre FirstName-LastName-Resume.pdf y no resume_final_v3 (2).pdf.
+
+Sin foto, sin gráficos, sin barras de habilidades. Una barrita de 7/10 al lado de "Python" no significa nada (7/10 comparado con ¿quién, Guido?) y suena a junior. En EE. UU., una foto incluso puede hacer que te descarten por políticas de responsabilidad por discriminación.
+
+Fuente estándar (Calibri, Helvetica, Georgia, Computer Modern), 10-12pt, márgenes de 0.5-0.75".
+
+Nada de "References available upon request." Nada de declaración de objetivo. Un resumen de 3 líneas solo vale para seniors; más de eso en la Parte 7.
+
+Orden de secciones. Estudiantes/nuevos graduados: Header > Education > Skills > Projects > Experience. Todos con 1.5+ años: Header > Experience > Skills > Projects (opcional) > Education. Cuando ya tienes experiencia de verdad, Education se reduce a una o dos líneas al final.
+
+Header: Nombre, ciudad + estado (o "Open to relocation"), email, teléfono, LinkedIn, GitHub, todo como links clickeables. Los reclutadores le dan click a GitHub más de lo que crees. Si el tuyo es un cementerio de repos vacíos con fork, o lo limpias o no lo pongas. Un GitHub vacío es peor que no poner GitHub. Pero la barra es baja: con un proyecto real desplegado y un README legible alcanza. No necesitas un gráfico verde de contribuciones; necesitas una cosa que valga la pena clicar.
+
+Aquí tienes un CV completo hecho exactamente con esta guía. Roba la estructura:
+
+r/ResumeTips - La plantilla de currículum para ingeniero de software que realmente consigue entrevistas (Todo lo que aprendí sobre currículums de ingenieros de software tras enviar más de 500 solicitudes y revisarlas yo mismo).
+El layout es la plantilla de CV Pure ATS, y es exactamente lo que dice el nombre: sin barras laterales, sin layout de dos columnas, sin barras de habilidades. Me cambié a esto después de correr mi vieja plantilla "designer" por un parser y ver cómo los títulos de trabajo caían en campos equivocados. Este parsea limpio.
+
+Si prefieres no pelearte con los márgenes de Google Docs durante una hora, la misma plantilla está dentro de este generador. Mismo formato, solo que te saltas el trabajo manual: editas todo en el navegador, recibes ayuda de IA para afinar bullets mientras los escribes y descargas un PDF limpio cuando quieras. También le pone el nombre al archivo FirstName-LastName-JobTitle.pdf y configura la metadata del PDF (título, descripción), que es el tipo de detalle que casi nadie se acuerda de hacer a mano.
+
+Parte 3: La fórmula del bullet (donde muere el 90% de los CVs)
+La mayoría de los bullets de SWE son descripciones de trabajo:
+
+❌ "Responsible for developing backend microservices"
+❌ "Fixed bugs and implemented new features"
+
+Eso dice lo que te tocaba hacer. Cualquier persona sentada en ese puesto podría escribirlas. En vez de eso, usa la fórmula XYZ: "Accomplished [X], as measured by [Y], by doing [Z]."
+
+✅ "Reduje la latencia p99 de la API de 1.2s a 340ms al implementar caching con Redis y reescribir queries N+1, mejorando la conversión en checkout en 2.1%"
+✅ "Bajé el gasto en AWS en $8.4K/mes al migrar jobs batch de EC2 a ECS con instancias de spot"
+✅ "Lancé un sistema de feature-flag usado por 40+ ingenieros, recortando los rollbacks de release en ~60%"
+
+Primero el resultado, luego el número, y al final la técnica. El reclutador ve el impacto; el gerente de contratación ve el criterio. Un bullet, dos audiencias.
+
+Un aviso antes de la chuleta: "un número" no significa "mejora porcentual". Si todos los bullets dicen "mejoré X en 40%, reduje Y en 60%, recorté Z en 35%," el lector deja de creerse cualquiera de ellos para el tercero, porque el trabajo real no produce un antes/después impecable cada vez. Aproximadamente la mitad de tus bullets deberían ser deltas. La otra mitad deberían ser escala o alcance: qué manejaste, qué tan grande era y de quién dependía. Esa mezcla se lee como alguien reportando la realidad, no como alguien invirtiendo ingeniería de una plantilla.
+
+"Pero no tengo métricas." Sí las tienes, solo que nunca las mediste. Una chuleta:
+
+Escala: requests/día, filas de DB, servicios, usuarios, tamaño del equipo
+
+Alcance: qué manejaste de punta a punta ("manejo principal del procesamiento de checkout de $2M/mes", "guardia principal (on-call) para 6 servicios")
+
+Velocidad: tiempo de build antes/después, frecuencia de despliegue, tiempo de consulta
+
+Dinero: costo de infraestructura, horas ahorradas × costo por hora, ingresos del flujo en el que trabajaste
+
+Calidad: número de incidentes, cambio en cobertura de pruebas, menos páginas de on-call
+
+Estimaciones cuidadosas están bien. "~30%", "de ~2 días a ~2 horas". Nadie te va a exigir que enseñes tu dashboard de Datadog. Solo prepárate para explicar la lógica en una entrevista, porque los buenos entrevistadores preguntan. "Lo estimé bien" es una respuesta válida; "me lo inventé" no.
+
+Prohíbe los verbos flojos (helped, worked on, assisted, was responsible for). Hazte cargo de tu parte de forma explícita: no "helped migrate the database" sino "migré 12 de 30 servicios de MySQL 5.7 a 8.0 con cero downtime." 3-5 bullets para roles recientes, 1-2 para los viejos.
+
+r/ResumeTips - La plantilla de currículum para ingeniero de software que realmente consigue entrevistas (Todo lo que aprendí sobre currículums de ingenieros de software tras enviar más de 500 solicitudes y revisarlas yo mismo).
+Parte 4: Habilidades (cortas, honestas, con arma)
+Todo lo que listes vale para la entrevista. ¿Pusiste Kubernetes porque una vez corriste kubectl get pods? Quédate para tu entrevista de sistemas. Si no puedes sobrevivir 5 minutos de preguntas sobre eso, quítalo.
+
+Ordena por relevancia al trabajo objetivo, no alfabéticamente. Los primeros 3-4 items se leen; el resto se escanea.
+
+Agrúpalas: Languages / Frameworks / Infra & Cloud / Tools, una línea por cada una, texto plano. No una grilla de tres columnas: eso es una tabla y parsea mal. En total, 3 o 4 líneas máximo. Un "caldo" de 25 items separados por comas te grita que no sabes priorizar, y eso es una señal de ingeniería (no buena).
+
+Borra el relleno: MS Office, Git (se asume, como listar "typing"), "Agile/Scrum" a menos que seas líder.
+
+Nunca listes soft skills o prácticas como si fueran skills. "Code review leadership", "incident response", "mentoring" no van en la línea de skills: son afirmaciones sin evidencia. Muéstralas en bullets en vez de eso ("mentored 3 juniors", "led response on 4 SEV-1s"). Las soft skills inventadas no se ven. Las demostradas se recuerdan.
+
+Parte 5: Proyectos, la sección que contrata juniors y a la que los seniors no le hacen caso
+¿Menos de 2 años de experiencia? Los proyectos son tu sección de experiencia disfrazada. ¿5+ años? Corta la sección, a menos que un proyecto sea realmente destacable (usuarios reales, open source con adopción).
+
+Qué hace que los proyectos abran entrevistas y no se queden en puro tutorial:
+
+Desplegado y en vivo gana. Un app medio hecho con una URL real y 30 usuarios reales supera un clon perfecto que solo corre en local. El deploy te mete de frente con los mismos problemas del trabajo del día 1 (auth, hosting, CI, migraciones) y los entrevistadores lo saben. También cambia la entrevista: le preguntas a alguien con un proyecto solo en local "¿qué se rompe con 500 usuarios" y te dan una suposición. Alguien con uno desplegado normalmente ya vio que algo se rompe con 5 usuarios y puede decirte qué hizo al respecto. Esa historia es la entrevista.
+
+Pon la URL en vivo directo en la línea del proyecto, no "link on GitHub." La mayoría de los filtros no clickean, pero los que sí te avanzan, y hacer que tengan que escarbar para encontrártelo es justo donde los pierdes.
+
+La señal instantánea: un app de todo, una app de clima, un clon de Netflix con el mismo nombre que un tutorial famoso de YouTube. Los screeners ya vieron los mismos tres proyectos 400 veces. Si empezaste desde un tutorial, extiéndelo hasta que sea irreconocible y luego describe la extensión.
+
+Escribe bullets del proyecto también en formato XYZ: "Construí una herramienta para rastrear precios con 200+ usuarios semanales; raspea 5K productos/día con un sistema de workers encolados (Python, Celery, Redis)."
+
+Un truco raro pero efectivo: mete un "por qué". "Construí X porque Y no existía para Z" suena a ingeniero resolviendo un problema. Los screeners se lo quedan porque dice que viste un hueco y actuaste sin que te lo asignaran, que es justo la característica por la que te están filtrando.
+
+Parte 6: Tailoring, el ritual de 15 minutos que triplica callbacks
+Un CV genérico disparado a 300 trabajos te deja con una tasa de callback de como 1-2%. El tailoring te sube de forma constante a 2-3 veces más. El ritual:
+
+Abre el JD. Resalta cada tecnología y cada sustantivo que aparezca dos o más veces.
+
+Replica la ortografía exacta en tu sección de skills y en 2-3 bullets (solo de cosas que de verdad hayas usado).
+
+Reordena. Este es el paso que casi todos se saltan, y importa más que el mirroring de keywords. Los top 3 requisitos del JD tienen que ser tus top 3 bullets, aunque eso signifique que tu trabajo más técnico caiga al bullet 4. El lector #1 está marcando casillas dentro de la zona de escaneo. Lo impresionante pero fuera de tema en la tercera parte de arriba es espacio desperdiciado.
+
+Empareja tu título si es un sinónimo honesto: "Software Engineer II (Member of Technical Staff)". Los reclutadores buscan por títulos estándar, y los no estándar te dejan en una especie de limbo donde ni te encuentran.
+
+Si el JD arranca con un dominio (fintech, healthcare), saca a la luz cualquier experiencia cercana. El match de dominio es un tiebreaker silencioso.
+
+No necesitas un CV nuevo por cada trabajo. Necesitas 2-3 versiones base (backend / full-stack / infra). Y sí: tu versión FAANG y tu versión de startup deberían ser distintas: las empresas grandes quieren escala y rigor; las startups quieren ownership y velocidad para sacar cosas.
+
+Dos formas de hacer que esos 15 minutos sean más cortos. Lo que uso ahora es el kit de aplicación: pegas la URL del trabajo, te saca el anuncio, adapta el CV y la carta de presentación a ese rol y lo mete en un tracker automáticamente. Antes yo hacía todo eso a mano en una Google Sheet, y ajustar cada una era fácilmente lo más agotador del proceso al aplicar a 40 trabajos.
+
+Si te quedas en Google Docs y no quieres pagar nada, este post tiene un prompt de tailoring que hace una versión bastante sólida de lo mismo con cualquier LLM. Pegas el JD, pegas tu CV, y hace el mirroring y el reordenamiento. Igual revisas la salida, pero es un atajo real.
+
+Parte 7: Seniors, tu CV tiene otro trabajo
+Si ya llevas 7+ años, el manual para juniors te perjudica activamente.
+
+El alcance reemplaza al stack. Nadie contrata a un staff engineer solo por saber React. "Lideré el diseño del pipeline del evento que maneja 2B eventos/día entre 4 equipos." Sistemas que se manejaban, decisiones que se tomaron, dólares que se impactaron. Aquí también es donde los bullets de escala/alcance de la Parte 3 hacen gran parte del trabajo; un CV senior lleno solo de deltas porcentuales suena a nivel medio.
+
+Un resumen de 3 líneas ahora sí se gana su lugar: "Ingeniero backend, 9 años, sistemas distribuidos a escala tipo fintech; lideré equipos de 4-8; lo más profundo en Go/Kubernetes/arquitecturas event-driven." Ese es el escaneo de 6 segundos, ya pre-masticado.
+
+Evidencia de liderazgo sin título de manager: mentoré a X ingenieros, manejé el loop de entrevistas, impulsé la migración del RFC. En bullets, nunca en la línea de skills.
+
+Comprime la historia antigua. Los roles de más de 10 años se vuelven una línea cada uno. Y corta tecnologías con las que no aceptas que te entrevisten. Todos saben que "10+ años de JavaScript" incluye la era de jQuery.

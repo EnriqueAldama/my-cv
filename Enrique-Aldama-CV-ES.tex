@@ -1,0 +1,149 @@
+% Compilar con pdfLaTeX o Tectonic. Este archivo es independiente.
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage[top=0.35in,bottom=0.35in,left=0.5in,right=0.5in]{geometry}
+\usepackage{textcomp}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{iftex}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\hypersetup{
+  pdftitle={Enrique Aldama - Curriculum Vitae},
+  pdfauthor={Enrique Aldama},
+  pdfsubject={Matemáticas, ingeniería del software e investigación}
+}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\urlstyle{same}
+\raggedright
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+% Los encabezados de texto mantienen el orden de lectura del PDF.
+\newenvironment{cvblock}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{10.8pt}%
+    \setlength{\rightmargin}{5.4pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\itemsep}{0pt}%
+  }\item[]%
+}{\end{list}}
+% Entrada de formación: #1 centro, #2 fechas, #3 título, #4 lugar
+\newcommand{\cventry}[4]{%
+  {\fontsize{11}{13}\selectfont\textbf{#1}\hfill\textbf{#2}\par}%
+  \textit{#3}\hfill\textit{#4}\par
+}
+% Entrada con stack: #1 organización, #2 fechas, #3 rol, #4 stack, #5 lugar
+\newcommand{\cvrole}[5]{%
+  {\fontsize{11}{13}\selectfont\textbf{#1}\hfill\textbf{#2}\par}%
+  \textit{#3}\,\textbar\,\textit{#4}\hfill\textit{#5}\par
+}
+% Proyecto: #1 título, #2 stack, #3 estado
+\newcommand{\cvproject}[3]{%
+  {\fontsize{11}{13}\selectfont\textbf{#1}\,\textbar\,\textit{#2}\hfill\hspace{1em}\textbf{#3}\par}%
+}
+\newenvironment{cvbullets}{%
+  \begin{itemize}[leftmargin=24pt,label=\textbullet,
+    labelsep=5pt,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt]%
+}{\end{itemize}}
+\newcommand{\cvspace}{\vspace{2pt}}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{25}{29}\selectfont\scshape Enrique Aldama}\par
+  \vspace{4pt}
+  Madrid, España\enspace\textbar\enspace
+  \href{tel:+34630716259}{+34 630 716 259}\enspace\textbar\enspace
+  \href{mailto:enrique01aldama@gmail.com}{\underline{enrique01aldama@gmail.com}}\enspace\textbar\enspace
+  \href{https://www.linkedin.com/in/enrique-aldama-moradillo/}{\textcolor{gray}{\faLinkedin\ } LinkedIn}\enspace\textbar\enspace
+  \href{https://github.com/EnriqueAldama}{\textcolor{gray}{\faGithub\ } GitHub}
+\end{center}
+\vspace{-7pt}
+
+\section{Formación académica}
+\begin{cvblock}
+  \cventry{Universidad Rey Juan Carlos}{2023--2028 (graduación prevista)}
+    {Doble Grado en Matemáticas e Ingeniería del Software}{Madrid, España}
+  \begin{cvbullets}
+    \item \textbf{Asignaturas relevantes:} Cálculo, Álgebra Lineal, Probabilidad, Estadística, Ecuaciones Diferenciales Ordinarias y en Derivadas Parciales, Topología, Estructuras de Datos, Programación Orientada a Objetos.
+  \end{cvbullets}
+  \cvspace
+  \cventry{IES Cardenal López de Mendoza}{2021--2023}
+    {Bachillerato Tecnológico, nota media 9.88/10, Matrícula de Honor}{Burgos, España}
+\end{cvblock}
+
+\section{Experiencia profesional}
+\begin{cvblock}
+  \cvrole{JetBrains}{2026--Actualidad}{AI Researcher}
+    {Python, Kotlin, Docker, Kubernetes (GKE), Harbor}{Madrid, España}
+  \begin{cvbullets}
+    \item Lideré un proyecto de investigación de transformación de tests unitarios a tests end-to-end (E2E) para creación de benchmarks para LLMs. Usando E2E tests se evitó filtrar interfaces y se generaron benchmarks más difíciles (medidos por mayor código generado, tokens y turnos).
+    \item Los agentes testados (Sonnet 5.5, GPT-Luna 5.6) generaron \textbf{3,9x más código} y usaron \textbf{2,6x más tokens} de razonamiento que en benchmarks anteriores.
+    \item Elevé la \textbf{tasa de éxito de la generación automática de tests E2E del 4,5\,\% al 80\,\%} preprocesando las tareas y envolviendo la generación dentro de un bucle de validación y mejora.
+  \end{cvbullets}
+  \cvspace
+  \cvrole{Portrip}{2024--2026}{Founding Engineer y Desarrollador Full-stack}
+    {React, Node.js, PostgreSQL, Firebase, XGBoost}{Madrid, España}
+  \begin{cvbullets}
+    \item Creé el modelo de pricing de portes de última milla con \textbf{XGBoost} usando portes pasados y datos augmentados. Facturamos \textbf{150.000\,\texteuro{}} en nuestro primer año como startup.
+    \item Desarrollé la plataforma web completa (diseño de arquitectura, back-end y front-end), que gestionó \textbf{+1.000 transportes}.
+    \item Diseñé la arquitectura junto al CTO, creé CI/CD en GitHub e integré Stripe, Google Maps y Mixpanel.
+  \end{cvbullets}
+  \cvspace
+  \cvrole{Desarrollador de software independiente}{2023--2024}{Full-stack Freelancer}
+    {GCP, Firebase, WordPress, PHP, Figma}{Madrid, España}
+  \begin{cvbullets}
+    \item \textbf{Agro4data (2025):} Desarrollé \textbf{APIs CRUD serverless} en Google Cloud Platform (GCP) con Cloud Functions para conectar sensores agrícolas con modelos predictivos de AI.
+    \item \textbf{Grúas Fácil (2024):} Creé un sistema de seguimiento en directo de grúas para una plantilla de \textbf{+50 grueros durante +900.000\,km} con Firebase Realtime Database, Telegram e integraciones on-premise.
+    \item \textbf{Conectim.club (2024):} Desarrollo completo de un marketplace multivendedor, con diseño de arquitectura, desarrollo en WordPress + PHP y despliegue en un VPS.
+  \end{cvbullets}
+\end{cvblock}
+
+\section{Proyectos}
+\begin{cvblock}
+  \cvproject{Arbitraje de tipos de la Fed: Polymarket vs. futuros}
+    {Python, pandas, Databento}{En desarrollo}
+  \begin{cvbullets}
+    \item Estrategia de arbitraje entre mercados de decisiones de la Reserva Federal en Polymarket y futuros de Fed Funds. Deriva el movimiento implícito de cada uno de los mercados y abre posición cuando el spread supera un umbral, calibrado por barrido de umbrales maximizando el Sharpe.
+    \item Backtest in-sample de 2 años (\textbf{218 operaciones}, con comisiones y slippage): \textbf{CAGR 185\,\%}, \textbf{Sharpe 2,8}, \textbf{Sortino 2,7} y drawdown máximo del 28\,\%.
+  \end{cvbullets}
+\end{cvblock}
+
+\section{Premios y liderazgo}
+\begin{cvblock}
+  \begin{cvbullets}
+    \item \textbf{Hackathones (2026):} Ganador de \href{https://lnkd.in/p/eifTBpXn}{\underline{\textbf{Hackspain}}} (sep.) y de \href{https://lnkd.in/p/emWiMK5R}{\underline{\textbf{JetBrains y UCM3}}} (abr.)
+    \item \textbf{Vicepresidente del club de emprendimiento WeBuild (2026)} de la Universidad Rey Juan Carlos.
+    \item \textbf{Escuela de Liderazgo Universitario (2023--2027):} Programa para estudiantes de alto rendimiento. Formación humanística en filosofía, liderazgo, debate y pensamiento crítico. Continuación de Becas Europa.
+    \item \textbf{Olimpiadas matemáticas regionales (2020--2023):} Ganador en \textbf{2} ocasiones. Finalista en \textbf{4}.
+    \item \href{https://www.diariodeburgos.es/noticia/ze412122f-0175-d486-dbf315234ef7e036/202306/un-alumno-de-10-que-busca-el-135}{\underline{\textbf{Becas Europa XVIII (2023)}}}\textbf{:} Viaje de 3 semanas por universidades europeas, conferencias de líderes en ciencia, tecnología y política. Uno de los 50 seleccionados entre +6.000 candidatos con media superior a \textbf{9,5/10}. 
+  \end{cvbullets}
+\end{cvblock}
+
+\section{Competencias técnicas e idiomas}
+\begin{cvblock}
+  \textbf{Lenguajes de programación:} Python, Kotlin, SQL (PostgreSQL), JavaScript, Java, C++\par
+  \textbf{Análisis cuantitativo y AI:} NumPy, pandas, Jupyter, XGBoost, backtesting, evaluación de LLMs\par
+  \textbf{Backend e infraestructura:} Node.js, React, Docker, Kubernetes (GKE), GCP, GitHub Actions (CI/CD)\par
+  \textbf{Idiomas:} Español (nativo). Inglés Cambridge C2 Proficiency (2022)
+\end{cvblock}
+
+\end{document}
